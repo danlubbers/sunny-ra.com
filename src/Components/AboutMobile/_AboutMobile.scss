@@ -1,0 +1,54 @@
+.about-container-mobile {
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px 15px 15px;
+    background-color: $background-color;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+
+    .sunny-portrait-mobile {
+        width: 350px;
+        border-radius: 40px;
+
+        @media (max-width: $screen-xs){
+            width: 275px;
+        }
+    }
+
+    .email-container-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        color: $font-color-grey;
+        font-size: 1em;
+        font-family: $font;
+
+        .email {
+            padding-left: 5px;
+            color: $font-color-grey;
+            font-size: 1em;
+            font-family: $font;
+        }
+    }
+
+    .education-container-mobile {
+        margin-top: 15px;
+        color: $font-color-grey;
+        font-size: 1em;
+        font-family: $font;
+        line-height: 20px;
+        letter-spacing: 1.5px;
+
+        .artist-educator-mobile {
+            text-align: center;
+        }
+
+        h3 {
+            color: rgb(100, 100, 100);
+                text-transform: uppercase;
+        }
+    }
+}

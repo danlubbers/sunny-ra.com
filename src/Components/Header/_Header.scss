@@ -1,0 +1,686 @@
+header {
+    // margin-bottom: 10px;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $background-color;
+
+    .sunny-logo-container {
+
+        .sunny-logo{
+            // margin-left: 75px;
+            width: 400px;
+
+            @media (max-width: #{$screen-sm}) {
+                width: 225px;
+            }
+        }
+    }
+
+    .hamburgerBtn {
+        display: none;
+        font-size: 2em;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+        color: $font-color-grey;
+
+        @media (max-width: #{$screen-lg}) {
+            display: block;
+        }
+    }
+            .slide-mobile {
+                background-color: $background-color;
+                width: 100vw;
+                height: 250vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                position: absolute;
+                top: -2000px;
+                left: 0px;
+                transition: .15 ease-in-out;
+                opacity: 0;
+                transition-property: opacity;
+                z-index: -1;
+
+                    @media (min-width: #{$screen-lg}) {
+                        display: none;
+                    }
+               }
+    
+               .slide-mobile-position {
+                    top: 100px;
+                    left: 0px;
+                    opacity: 1;
+                    z-index: 50;
+               }
+
+               .mobile-content-container {
+                   padding: 0;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: flex-start;
+                   align-items: center;
+                   list-style-type: none;
+
+               .mobile-text-content {
+                   margin: 10px 0px;
+                   font-size: 1.2em;
+                   color: $font-color-grey;
+                   font-family: $font;
+                   letter-spacing: 4px;
+                   text-transform: uppercase;
+                   cursor: pointer;
+
+
+                }
+                .mobile-dropdown {
+                    padding: 0;
+                    // background-color: red;
+                    
+                    li {
+                        @extend .mobile-text-content;
+                        display: flex;
+                        justify-content: center;
+                        margin: 20px 0px 10px 0px;
+                        font-size: 1em;
+                        color: rgb(125, 125, 125);
+                        
+                       
+                    }
+                }
+                
+                    .commissionMobileBtn {
+                        margin: 10px 0px;
+                        font-size: 1.2em;
+                        font-family: $font;
+                        color: $font-color-grey;
+                        letter-spacing: 4px;
+                        background: none;
+                        border: none;
+                        padding: 0;   
+                
+                    }
+                    
+                    .commissionMobileBtn:focus {
+                       outline: 0;
+                    }
+                
+                    .aboutMobileBtn {
+                        @extend .commissionMobileBtn;
+                    }
+
+                    .aboutMobileBtn:focus {
+                        outline: 0;
+                    }
+
+                    .exhibitionsMobileBtn {
+                        @extend .commissionMobileBtn;
+                    }
+
+                    .exhibitionsMobileBtn:focus {
+                        outline: 0;
+                    }
+
+
+               .horizontal-line{
+                width: 95vw;
+                border-bottom: 1px solid #999;
+                margin: 20px 0px 10px 0px;
+              }
+            }
+
+    nav {
+    // background-color: blue;
+    // margin: 0px 0px 0px 100px;
+    // width: 960px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      overflow: visible;
+      position: relative;
+      z-index: 100;
+
+      @media (max-width: #{$screen-lg}) {
+        display: none;
+    }
+        ul {
+            margin: 0;
+            padding-top: 25px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            list-style-type: none;
+            
+
+           
+                @media (max-width: #{$screen-xl}) {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    font-size: .82em;
+                }
+            
+
+            .paintingBtn {
+                font-size: 1em;
+                font-family: $font;
+                color: $font-color-grey;
+                background: none;
+                border: none;
+                padding: 0;
+            }
+
+            .paintingBtn:hover {
+                color: $font-color-hover;
+                transition: .25s ease-in-out;
+                cursor: pointer;
+            }
+            .paintingBtn:focus {
+                outline: 0;
+            }
+
+           .slide-painting {
+            background-color: $background-color;
+            width: 100px;
+            height: 215px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            top: -250px;
+            left: -10px;
+            transition: .15 ease-in-out;
+            opacity: 0;
+            transition-property: opacity;
+            z-index: -1;
+
+            @media (max-width: #{$screen-lg}) {
+                display: none;
+            }
+
+            li {
+                margin: 10px 5px 10px 0px;
+                font-size: 1em;
+                cursor: pointer;
+
+            }
+           }
+
+           .slide-painting-position {
+            top: 45px;
+            left: -10px;
+            opacity: 1;
+            z-index: 50;
+           }
+
+
+           .worksBtn {
+                margin-left: 25px;
+                font-size: 1em;
+                font-family: $font;
+                color: $font-color-grey;
+                background: none;
+                border: none;
+                padding: 0;
+
+                @media (max-width: #{$screen-xl}) {
+                   margin-left: 10px;;
+                }
+                
+            }
+
+            .worksBtn:hover {
+                color: $font-color-hover;
+                transition: .25s ease-in-out;
+                cursor: pointer;
+            }
+            .worksBtn:focus {
+                outline: 0;
+            }
+
+            .slide-works {
+                background-color: $background-color;
+                width: 150px;
+                height: 150px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                position: absolute;
+                top: -250px;
+                left: 118px;
+                transition: .15 ease-in-out;
+                opacity: 0;
+                transition-property: opacity;
+                z-index: -1;
+
+                @media (max-width: #{$screen-lg}) {
+                    display: none;
+                }
+
+                @media (max-width: ($screen-xl)) {
+                    width: 100px; 
+                }
+    
+                li {
+                    margin: 10px 5px 10px 0px;
+                    font-size: 1em;
+                    cursor: pointer;
+                }
+               }
+    
+               .slide-works-position {
+                    top: 45px;
+                    left: 95px;
+                    opacity: 1;
+                    z-index: 50;
+
+                    @media (max-width: ($screen-xl)) {
+                        left: 75px;
+                    }
+               }
+
+                .galleryBtn {
+                    margin-left: 25px;
+                    font-size: 1em;
+                    font-family: $font;
+                    color: $font-color-grey;
+                    background: none;
+                    border: none;
+                    padding: 0;
+
+                    @media (max-width: #{$screen-xl}) {
+                        margin-left: 10px;;
+                     }
+                }
+ 
+                .galleryBtn:hover {
+                    color: $font-color-hover;
+                    transition: .25s ease-in-out;
+                    cursor: pointer;
+                }
+                .galleryBtn:focus {
+                    outline: 0;
+                }
+
+                .slide-gallery {
+                    background-color: $background-color;
+                    width: 200px;
+                    height: 70px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    position: absolute;
+                    top: -250px;
+                    left: 210px;
+                    transition: .15 ease-in-out;
+                    opacity: 0;
+                    transition-property: opacity;
+                    z-index: -1;
+
+                    @media (max-width: #{$screen-lg}) {
+                        display: none;
+                    }
+
+                    @media (max-width: ($screen-xl)) {
+                        width: 150px; 
+                    }
+        
+                    li {
+                        margin: 10px 5px 10px 0px;
+                        font-size: 1em;
+                        cursor: pointer;
+                    }
+                }
+        
+                .slide-gallery-position {
+                    top: 45px;
+                    left: 210px;
+                    opacity: 1;
+                    z-index: 50;
+
+                    @media (max-width: ($screen-xl)) {
+                        left: 165px;
+                    }
+                }
+
+                .commissionBtn {
+                    margin-left: 25px;
+                    font-size: 1em;
+                    font-family: $font;
+                    color: $font-color-grey;
+                    background: none;
+                    border: none;
+                    padding: 0;   
+
+                    @media (max-width: #{$screen-xl}) {
+                        margin-left: 10px;;
+                     }
+                }
+                .commissionBtn:hover {
+                    color: $font-color-hover;
+                    transition: .25s ease-in-out;
+                    cursor: pointer;
+                }
+                .commissionBtn:focus {
+                    outline: 0;
+                }
+
+            li {
+                font-size: $font-size;
+                font-family: $font;
+                margin-left: 25px;
+                color: $font-color-grey;
+
+                @media (max-width: #{$screen-xl}) {
+                    margin-left: 10px;;
+                 }
+            }
+            li:hover {
+                color: $font-color-hover;
+                transition: .25s ease-in-out;
+            }
+
+            .aboutBtn {
+                font-size: 1.1em;
+                font-family: $font;
+                color: $font-color-grey;
+                background: none;
+                border: none;
+                padding: 0;
+
+                
+                
+            }
+            .aboutBtn:hover {
+                color: $font-color-hover;
+                transition: .25s ease-in-out;
+                cursor: pointer;
+            }
+            .aboutBtn:focus {
+                outline: 0;
+            }
+
+            .exhibitionsBtn {
+                font-size: 1.1em;
+                font-family: $font;
+                color: $font-color-grey;
+                background: none;
+                border: none;
+                padding: 0;
+                
+            }
+            .exhibitionsBtn:hover {
+                color: $font-color-hover;
+                transition: .25s ease-in-out;
+                cursor: pointer;
+            }
+            .exhibitionsBtn:focus {
+                outline: 0;
+            }
+        }
+    }
+    .slide-about {
+        background-color: $background-color;
+        width: 100%;
+        height: 930px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: -1000px;
+        transition: .25s ease-in-out;
+        opacity: 0;
+        transition-property: opacity;
+        z-index: -1;
+
+        @media (max-width: #{$screen-lg}) {
+            display: none;
+        }
+    }
+            
+    .slide-about-position {
+        top: 100px;
+        right: 0px;
+        opacity: 1;
+        z-index: 595;
+    }
+    .about-container {
+        width: 85%;
+        height: 100%;
+        margin-left: 150px;
+        padding: 0px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        // background-color: yellow;
+
+        @media (max-width: #{$screen-lg}) {
+            display: none;
+        }
+
+        @media (max-width: 1290px) {
+            width: 100%;
+            margin-left: 25px;
+            overflow: auto;
+        }
+
+        .photo-contact-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .sunny-portrait {
+                width: 350px;
+                border-radius: 40px;
+            }
+
+            .email-container{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+
+                h3 {
+                    margin-top: 10px;
+                    font-family: $font;
+                    line-height: 16px;
+                    letter-spacing: 1px;
+                    font-size: 1em;
+                    color: rgb(100, 100, 100);
+                }
+    
+                .email {
+                    margin-top: 10px;
+                    padding-left: 5px;
+                    color: $font-color-grey;
+                    font-size: 1em;
+                    font-family: $font;
+                } 
+    
+                .email:hover {
+                    color: $font-color-hover;
+                    transition: .25s ease-in-out;
+                    cursor: pointer;
+                }
+            }
+
+        }
+        .education-container {
+            width: 100%;
+            padding-left: 25px;
+            
+
+            h3 {
+                // margin: 10px;
+                font-family: $font;
+                line-height: 16px;
+                letter-spacing: 1px;
+                font-size: 1em;
+                color: rgb(100, 100, 100);
+                text-transform: uppercase;
+            }
+
+            h4 {
+                @extend h3;
+                margin: 10px;
+                font-size: .8em;
+                color: $font-color-grey;
+                line-height: 24px;
+            }
+        }
+                .xBtnAbout {
+                    font-size: 2em;
+                    border: none;
+                    cursor: pointer;
+                    background: transparent;
+                    color: $font-color-grey;
+                }
+        
+                .xBtnAbout:hover {
+                    color: $font-color-hover;
+                    transition: .25s ease-in-out;
+                    cursor: pointer;
+                }
+        
+                .xBtnAbout:focus {
+                    outline: 0;
+                }
+    }
+            .slide-exhibitions {
+                background-color: $background-color;
+                width: 100%;
+                height: 930px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                position: absolute;
+                top: -1000px;
+                transition: .25s ease-in-out;
+                opacity: 0;
+                transition-property: opacity;
+                z-index: -1;
+                overflow: auto;
+            }
+                    
+            .slide-exhibitions-position {
+                top: 100px;
+                right: 0px;
+                opacity: 1;
+                z-index: 500;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;  
+            }
+
+            .exhibition-container {
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                margin: 0px 90px;
+
+                @media (max-width: 1550px) {
+                    margin: 0px 25px;
+                }
+                @media (max-width: ($screen-xl)) {
+                    margin: 0px 0px;
+                }
+
+
+    
+            .exhibition-history {
+                width: 50%;
+                height: 100%;
+                margin-left: 75px;
+                padding: 0px 28px;
+
+                @media (max-width: ($screen-xl)) {
+                    margin: 0px 25px;
+                }
+
+                  h3 {
+                // margin: 10px;
+                font-family: $font;
+                line-height: 16px;
+                letter-spacing: 1px;
+                font-size: 1em;
+                color: rgb(100, 100, 100);
+                text-transform: uppercase;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+            }
+            li {
+                @extend h3;
+                margin: 10px;
+                font-size: .8em;
+                color: $font-color-grey;
+                line-height: 24px;
+            }
+
+
+        }
+        .awards-container {
+            width: 50%;
+            padding-left: 50px;
+
+        h3 {
+            // margin: 10px;
+            font-family: $font;
+            line-height: 16px;
+            letter-spacing: 1px;
+            font-size: 1em;
+            color: rgb(100, 100, 100);
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        h4 {
+            @extend h3;
+            margin: 10px;
+            font-size: .8em;
+            color: $font-color-grey;
+            line-height: 24px;
+        }
+    }
+        .xBtnExhibition-container{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+        }
+
+        .xBtnExhibitions {
+            font-size: 2em;
+            border: none;
+            cursor: pointer;
+            background: transparent;
+            color: $font-color-grey;
+        }
+
+        .xBtnExhibitions:hover {
+            color: $font-color-hover;
+            transition: .25s ease-in-out;
+            cursor: pointer;
+        }
+
+        .xBtnExhibitions:focus {
+            outline: 0;
+        }   
+        
+        // Readjust spacing on Navbar between desktop and switching ot Mobile View
+        button {
+            @media (max-width: #{$screen-xl}) {
+                margin: 0px 5px 0px 5px;
+            }
+        }
+    }
+}
