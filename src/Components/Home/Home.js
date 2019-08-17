@@ -10,7 +10,7 @@ class Home extends Component {
 
     render() {
         if(this.props.getAllHomeImages) {
-        var test = this.props.homeImages.map((e, i) => {
+        var imageData = this.props.homeImages.map((e, i) => {
             // console.log(e.orientation)
             if(e.orientation === 'horizontal') {
                 
@@ -23,14 +23,12 @@ class Home extends Component {
                         <img src={e.img} alt={e.title}/>
                     </li>
                 </ul>
-            
-            
         )})
     }
     
     return(
         <div className='home-container-desktop'>
-            {test}
+            {imageData}
         </div>
         )
     }

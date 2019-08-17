@@ -1,38 +1,45 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { getAllPaintings2006 } from '../../../ducks/reducer';
 
 
-export default class Paintings2006 extends Component {
-    state = {
-        images: [
-            "https://s3.amazonaws.com/content.danlubbers.com/sunny-content/images/paintings/2006/paintings2006-1.jpg",
-            "https://s3.amazonaws.com/content.danlubbers.com/sunny-content/images/paintings/2006/paintings2006-2.jpg",
-            "https://s3.amazonaws.com/content.danlubbers.com/sunny-content/images/paintings/2006/paintings2006-3.jpg",
-            "https://s3.amazonaws.com/content.danlubbers.com/sunny-content/images/paintings/2006/paintings2006-4.jpg",
-            "https://s3.amazonaws.com/content.danlubbers.com/sunny-content/images/paintings/2006/paintings2006-5.jpg",
-        ]
-    };
+class Paintings2006 extends Component {
+
+    componentDidMount() {
+        this.props.getAllPaintings2006().then((data => {console.log('resolved: ', data)}))
+    }
 
     render() {
 
-        let images = this.state.images.map((e, i) => {
-            return (
-                <div className="images-container">
-                    <li key={i}>
-                    <img src={e} alt="" />
-                </li>
-            </div>
-        )})
-    
-    return (
-        <div className='paintings-container'>
-            {images}
-                    {/* <img className='mobile-images' src="https://s3.amazonaws.com/content.danlubbers.com/sunny-content/images/paintings/2006/paintings2006-1.jpg" alt='The Final Round'/>
-                    <img className='mobile-images' src="https://s3.amazonaws.com/content.danlubbers.com/sunny-content/images/paintings/2006/paintings2006-2.jpg" alt="It's Not Enough"/>
-                    <img className='mobile-images' src="https://s3.amazonaws.com/content.danlubbers.com/sunny-content/images/paintings/2006/paintings2006-3.jpg" alt='The Only One'/>
-                    <img className='mobile-images' src="https://s3.amazonaws.com/content.danlubbers.com/sunny-content/images/paintings/2006/paintings2006-4.jpg" alt='Make it Tomorrow'/>
-                    <img className='mobile-images' src="https://s3.amazonaws.com/content.danlubbers.com/sunny-content/images/paintings/2006/paintings2006-5.jpg" alt='Go Ahead'/> */}
-        </div>
+        if(this.props.getAllPaintings2006) {
+            var imageData = this.props.paintings2006.map((e, i) => {
+                // console.log(e.orientation)
+                if(e.orientation === 'horizontal') {
+                    
+                }
+                return (
+                    <ul className='images-container' key={i}>
+                        <li>
+                            <h1>{e.title}</h1>
+                            <h5>{e.dimensions} {e.medium}</h5>
+                            <img src={e.img} alt={e.title}/>
+                        </li>
+                    </ul>
+            )})
+        }
         
-    )
+        return(
+            <div className='home-container-desktop'>
+                {imageData}
+            </div>
+            )
+        }
+    }
+
+function mapStateToProps(state) {
+    return{
+        paintings2006: state.allPaintings2006
     }
 }
+
+export default connect(mapStateToProps,  {getAllPaintings2006}) (Paintings2006);

@@ -31,6 +31,8 @@ app.use(express.static(__dirname + '/../build'))
 app.use(router)
 
 app.get(`/api/getAllHomeImages`, controller.homeImages)
+app.get(`/api/getAllPaintings2006`, controller.paintings2006)
+app.get(`/api/getAllPaintings2008`, controller.paintings2008)
 
 
 // Port
