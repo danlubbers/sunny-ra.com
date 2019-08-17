@@ -123,12 +123,14 @@ export default class Header extends Component {
                 <div className='hamburger-container'>
                     <button className='hamburgerBtn' onClick={this.handleClickMobile} aria-label='hamburger-menu'><FaBars/></button>
                     <div className={mobileDropDown}>
-                        <ul className='mobile-content-container'>
+                        <div className='mobile-content-container'>
                             <div className='horizontal-line'></div>
                             <Toggle>
                                 {({on, toggle})=> (
                                     <div>
+                                        <ul>
                                         <li className='mobile-text-content' onClick={toggle} >Paintings</li>
+                                        </ul>
                                             {on && 
                                             <ul className='mobile-dropdown'>
                                                 <Link to='/paintings2006'><li onClick={this.handleClickMobile}>2006</li></Link>
@@ -146,7 +148,9 @@ export default class Header extends Component {
                             <Toggle>
                                 {({on, toggle})=> (
                                     <div>
+                                        <ul>
                                         <li className='mobile-text-content' onClick={toggle}>WORKS ON PAPER</li>
+                                        </ul>
                                         {on && 
                                             <ul className='mobile-dropdown'>
                                                 <Link to='/works2006'><li onClick={this.handleClickMobile}>2006</li></Link>
@@ -162,7 +166,9 @@ export default class Header extends Component {
                             <Toggle>
                                 {({on, toggle})=> (
                                     <div>
+                                        <ul>
                                         <li className='mobile-text-content' onClick={toggle}>PHOTO GALLERY</li>
+                                        </ul>
                                         {on && 
                                             <ul className='mobile-dropdown'>
                                                 <Link to='/installation'><li onClick={this.handleClickMobile}>Installations</li></Link>
@@ -179,7 +185,7 @@ export default class Header extends Component {
                             <div className='horizontal-line'></div>
                             <Link to="/exhibitionmobile"><button className='exhibitionsMobileBtn' onClick={this.handleClickMobile}>Exhibitions</button></Link>
                             <div className='horizontal-line'></div>
-                        </ul>
+                        </div>
                     </div>
                 </div>
                 <nav>
