@@ -27,9 +27,9 @@ class Home extends Component {
     }
     
     return(
-        <div className='home-container-desktop'>
+        <article className='home-container-desktop'>
             {imageData}
-        </div>
+        </article>
         )
     }
 }

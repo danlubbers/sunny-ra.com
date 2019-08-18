@@ -6,17 +6,15 @@ import { getAllPaintings2008 } from '../../../ducks/reducer';
 class Paintings2008 extends Component {
 
     componentDidMount() {
-        this.props.getAllPaintings2008().then((data => {console.log('resolved: ', data)}))
+        this.props.getAllPaintings2008().then((data => {
+            console.log('resolved: ', data)
+        }))
     }
 
     render() {
 
         if(this.props.getAllPaintings2008) {
             var imageData = this.props.paintings2008.map((e, i) => {
-                // console.log(e.orientation)
-                if(e.orientation === 'horizontal') {
-                    
-                }
                 return (
                     <ul className='images-container' key={i}>
                         <li>
@@ -29,9 +27,9 @@ class Paintings2008 extends Component {
         }
         
         return(
-            <div className='home-container-desktop'>
+            <article className='home-container-desktop'>
                 {imageData}
-            </div>
+            </article>
             )
         }
     }
