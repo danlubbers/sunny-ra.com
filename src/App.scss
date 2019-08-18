@@ -17,23 +17,19 @@ $screen-xl: 1235px;
 @import './Components/Header/Header';
 @import './Components/Footer/Footer';
 @import './Components/Home/Home';
-@import './Components/Carousel/Carousel';
 @import './Components/About/About';
 @import './Components/Exhibition/Exhibition';
 
-@import './Components/Paintings/Paintings2006/Paintings2006';
+// @import './Components/Paintings/Paintings2006/Paintings2006';
 
 
-html {
-    
-    // background-color: green;
-}
-.entire-app-wrapper {
-    height: 100vh;;
-    width: 100vw;
-    // flex-grow: 1;
-        //   background-color: red;
-      }
+// html {
+//     background-color: green;
+// }
+
+// .entire-app-wrapper {
+//     background-color: red;
+// }
 
 
 

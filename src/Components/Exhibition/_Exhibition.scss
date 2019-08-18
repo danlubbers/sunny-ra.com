@@ -8,8 +8,8 @@
     align-items: center;
 
     @media (min-width: $screen-md) {
+        height: 100vh;
         padding: 0 0 0 125px;
-        height: 100%;
         align-items: flex-start;
     }
     
