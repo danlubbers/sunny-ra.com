@@ -5,102 +5,89 @@ import Toggle from '../../Components/Toggle/Toggle';
 import { FaBars } from 'react-icons/fa';
 
 export default class Header extends Component {
-    constructor(props) {
-        super(props)
+   
+    state = {
+        showMobile: false,
+        showPainting: false,
+        showWorks: false,
+        showGallery: false,
+        showHome: false,
+        showAbout: false,
+        showExhibitions: false
+    }
+
+    handleClickMobile = () => {
+        this.setState({showMobile: !this.state.showMobile})
+    }
+
+    handleClickMobilePainting = () => {
+        this.setState({showMobilePainting: !this.state.showMobilePainting})
+    }
+
+    handleOverPainting = () => {
+        this.setState({
+            showPainting: !this.state.showPainting,
+            showWorks: false,
+            showGallery: false
+        })
+    }
+
+    handleOverWorks = () => {
+        this.setState({
+            showWorks: !this.state.showWorks,
+            showPainting: false,
+            showGallery: false
+        })
+    }
+
+    handleOverGallery = () => {
+        this.setState({
+            showGallery: !this.state.showGallery,
+            showPainting: false,
+            showWorks: false
+        })
+    }
+
+    handleClickHome = () => {
+        this.setState({
+            showAbout: false,
+            howPainting: false, 
+            showWorks: false,
+            showGallery: false,
+            showMobile: false
+        })
+        this.handleLeave()
+    }
     
-            this.state = {
-                showMobile: false,
-                showPainting: false,
-                showWorks: false,
-                showGallery: false,
-                showHome: false,
-                showAbout: false,
-                showExhibitions: false
-            }
-            this.handleClickMobile = this.handleClickMobile.bind(this);
-            this.handleClickMobilePainting = this.handleClickMobilePainting.bind(this);
-            this.handleOverPainting = this.handleOverPainting.bind(this);
-            this.handleOverWorks = this.handleOverWorks.bind(this);
-            this.handleOverGallery = this.handleOverGallery.bind(this);
-            this.handleClickHome = this.handleClickHome.bind(this);
-            this.handleClickAbout = this.handleClickAbout.bind(this);
-            this.handleClickExhibitions = this.handleClickExhibitions.bind(this);
-            this.handleLeave = this.handleLeave.bind(this);
-        }
+    handleClickAbout = () => {
+        this.setState({
+            showAbout: !this.state.showAbout,
+            showPainting: false,
+            showWorks: false,
+            showGallery: false,
+            showExhibitions: false
+        })
+    }
 
-        handleClickMobile() {
-            this.setState({showMobile: !this.state.showMobile})
-        }
+    handleClickExhibitions = () => {
+        this.setState({
+            showExhibitions: !this.state.showExhibitions,
+            showPainting: false,
+            showWorks: false,
+            showGallery: false,
+            showAbout: false,
+        })
+    }
 
-        handleClickMobilePainting() {
-            this.setState({showMobilePainting: !this.state.showMobilePainting})
-        }
-
-        handleOverPainting() {
-            this.setState({
-                showPainting: !this.state.showPainting,
-                showWorks: false,
-                showGallery: false
-            })
-        }
-
-        handleOverWorks() {
-            this.setState({
-                showWorks: !this.state.showWorks,
-                showPainting: false,
-                showGallery: false
-            })
-        }
-
-        handleOverGallery() {
-            this.setState({
-                showGallery: !this.state.showGallery,
-                showPainting: false,
-                showWorks: false
-            })
-        }
-
-
-        handleClickHome() {
-            this.setState({
-                showAbout: false,
-                howPainting: false, 
-                showWorks: false,
-                showGallery: false,
-                showMobile: false
-            })
-            this.handleLeave()
-        }
-    
-        handleClickAbout() {
-            this.setState({
-                showAbout: !this.state.showAbout,
-                showPainting: false,
-                showWorks: false,
-                showGallery: false,
-                showExhibitions: false
-            })
-        }
-
-        handleClickExhibitions() {
-            this.setState({
-                showExhibitions: !this.state.showExhibitions,
-                showPainting: false,
-                showWorks: false,
-                showGallery: false,
-                showAbout: false,
-            })
-        }
-
-        handleLeave() {
-            this.setState({
-                showPainting: false, 
-                showWorks: false,
-                showGallery: false,
-                showAbout: false,
-                showExhibitions: false
-            })
-        }
+    handleLeave = () => {
+        this.setState({
+            showPainting: false, 
+            showWorks: false,
+            showGallery: false,
+            showAbout: false,
+            showExhibitions: false
+        })
+    }
 
     render() {
         let {showPainting, showWorks, showGallery, showMobile} = this.state;
