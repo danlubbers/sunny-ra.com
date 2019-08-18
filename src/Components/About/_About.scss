@@ -1,4 +1,4 @@
-.about-container-mobile {
+.about-container {
     width: 100%;
     padding: 0px 30px 200px 30px;
     background-color: $background-color;
@@ -7,14 +7,14 @@
     flex-direction: column;
     align-items: center;
     
-    @media (min-width: 769px) {
+    @media (min-width: $screen-md) {
         height: 100vh;
         padding: 0 100px 200px 100px;
         flex-direction: row;
         align-items: flex-start;
     }
 
-    .sunny-portrait-mobile {
+    .sunny-portrait {
         margin: 0 25px;
         width: 350px;
         border-radius: 40px;
@@ -24,7 +24,7 @@
         }
     }
 
-    .email-container-mobile{
+    .email-container{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,7 +41,7 @@
         }
     }
 
-    .education-container-mobile {
+    .education-container {
         margin-top: 15px;
         color: $font-color-grey;
         font-size: 1em;
@@ -49,10 +49,10 @@
         line-height: 20px;
         letter-spacing: 1.5px;
 
-        .artist-educator-mobile {
+        .artist-educator {
             text-align: center;
 
-            @media (min-width: 768px) {
+            @media (min-width: $screen-md) {
                text-align: left;
             }
         }

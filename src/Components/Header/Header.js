@@ -176,9 +176,9 @@ export default class Header extends Component {
                             <div className='horizontal-line'></div>
                             <Link to='/commissioned'><button className='commissionMobileBtn' onClick={this.handleClickMobile}>Commissioned Work</button></Link>
                             <div className='horizontal-line'></div>
-                            <Link to="/aboutmobile"><button className='aboutMobileBtn' onClick={this.handleClickMobile} >About</button></Link>
+                            <Link to="/about"><button className='aboutMobileBtn' onClick={this.handleClickMobile} >About</button></Link>
                             <div className='horizontal-line'></div>
-                            <Link to="/exhibitionmobile"><button className='exhibitionsMobileBtn' onClick={this.handleClickMobile}>Exhibitions</button></Link>
+                            <Link to="/exhibition"><button className='exhibitionsMobileBtn' onClick={this.handleClickMobile}>Exhibitions</button></Link>
                             <div className='horizontal-line'></div>
                         </div>
                     </div>
@@ -207,8 +207,8 @@ export default class Header extends Component {
                                 <Link to='/studentwork'><li>Student Work</li></Link>
                                 </div>
                         <Link to='/commissioned'><button className='commissionBtn' onClick={this.handleLeave}>Commissioned Work</button></Link>
-                        <Link to='/aboutmobile' className='aboutBtn' onClick={this.handleClickAbout} >About</Link>
-                        <Link to='/exhibitionmobile' className='exhibitionsBtn' onClick={this.handleClickExhibitions} >Exhibitions</Link>
+                        <Link to='/about' className='aboutBtn' onClick={this.handleClickAbout} >About</Link>
+                        <Link to='/exhibition' className='exhibitionsBtn' onClick={this.handleClickExhibitions} >Exhibitions</Link>
                     </ul>
                 </nav>
             </header>

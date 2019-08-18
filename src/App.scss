@@ -9,7 +9,7 @@ $background-color: rgb(25, 25, 25);
 $font: 'Montserrat', sans-serif;
 $screen-xs: 376px;
 $screen-sm: 576px;
-$screen-md: 768px;
+$screen-md: 769px;
 $screen-lg: 965px;
 $screen-xl: 1235px;
 
@@ -18,8 +18,8 @@ $screen-xl: 1235px;
 @import './Components/Footer/Footer';
 @import './Components/Home/Home';
 @import './Components/Carousel/Carousel';
-@import './Components/AboutMobile/AboutMobile';
-@import './Components/ExhibitionMobile/ExhibitionMobile';
+@import './Components/About/About';
+@import './Components/Exhibition/Exhibition';
 
 @import './Components/Paintings/Paintings2006/Paintings2006';
 

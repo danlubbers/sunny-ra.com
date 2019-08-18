@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function ExhibitionMobile() {
+export default function Exhibition() {
 
     return(
-        <article className='exhibition-container-mobile'> 
-            <section className='awards-container-mobile'>
+        <article className='exhibition-container'> 
+            <section className='awards-container'>
                 <h3>Awards/Recognition:</h3>
                     <ul>
                         <li>Great Meadows Foundation Grant</li>
@@ -16,7 +16,7 @@ export default function ExhibitionMobile() {
                         <li>Gates Millennium Scholar</li>
                     </ul>
             </section>
-            <section className='exhibition-history-mobile'>
+            <section className='exhibition-history'>
                 <h3>Exhibition History</h3>   
                     <ul>
                         <li>Solo Exhibition, Quills, Louisville, KY 2017</li>

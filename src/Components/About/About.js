@@ -1,17 +1,17 @@
 import React from 'react'
 
-export default function AboutMobile () {
+export default function About() {
 
     let email = 'sunnyra23@gmail.com';
 
     return(
-        <article className='about-container-mobile'>
-            <div className='photo-contact-container-mobile'>
-                <img className='sunny-portrait-mobile' src="https://s3.amazonaws.com/content.danlubbers.com/sunny-content/sunny-red-dress.jpg" alt='Sunny Ra'/>
-                <span className='email-container-mobile'> <h3>Email:</h3> <a className='email' href={`mailto:${email}`}>sunnyra23@gmail.com</a></span>
+        <article className='about-container'>
+            <div className='photo-contact-container'>
+                <img className='sunny-portrait' src="https://s3.amazonaws.com/content.danlubbers.com/sunny-content/sunny-red-dress.jpg" alt='Sunny Ra'/>
+                <span className='email-container'> <h3>Email:</h3> <a className='email' href={`mailto:${email}`}>sunnyra23@gmail.com</a></span>
             </div>
-            <section className='education-container-mobile'>
-                <h3 className='artist-educator-mobile'>ARTIST / EDUCATOR</h3>
+            <section className='education-container'>
+                <h3 className='artist-educator'>ARTIST / EDUCATOR</h3>
                 <br/>
                 <h3>Education:</h3>
                     <ul>
