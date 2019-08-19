@@ -34,6 +34,8 @@ class Collections extends Component {
             galleryTitle = gallery;
         }
 
+        
+
         if(this.props.getAllImages) {
             var imageData = this.props.allImages.map((e, i) => {
                 return (

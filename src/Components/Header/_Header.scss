@@ -1,5 +1,4 @@
 header {
-    // margin-bottom: 20px;
     width: 100vw;
     height: 100px;
     display: flex;
@@ -10,7 +9,6 @@ header {
     .sunny-logo-container {
 
         .sunny-logo{
-            // margin-left: 75px;
             width: 400px;
 
             @media (max-width: #{$screen-sm}) {
@@ -135,9 +133,6 @@ header {
             }
 
     nav {
-    // background-color: blue;
-    // margin: 0px 0px 0px 100px;
-    // width: 960px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import routes from './routes';
-
-// import 'babel-polyfill'
+import 'babel-polyfill';
 
 import { Helmet } from "react-helmet";
 
