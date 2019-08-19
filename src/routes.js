@@ -4,8 +4,8 @@ import {Switch, Route} from 'react-router-dom';
 import Home from './Components/Home/Home'
 
 // Paintings Category
-import Paintings2006 from './Components/Paintings/Paintings2006/Paintings2006'
-import Paintings2008 from './Components/Paintings/Paintings2008/Paintings2008'
+// import Paintings2006 from './Components/Paintings/Paintings2006/Paintings2006'
+// import Paintings2008 from './Components/Paintings/Paintings2008/Paintings2008'
 import Paintings2010 from './Components/Paintings/Paintings2010/Paintings2010'
 import Paintings2012 from './Components/Paintings/Paintings2012/Paintings2012'
 import Paintings2014 from './Components/Paintings/Paintings2014/Paintings2014'
@@ -26,11 +26,13 @@ import Commissioned from './Components/Commissioned/Commissioned'
 import About from './Components/About/About';
 import Exhibition from './Components/Exhibition/Exhibition';
 
+import Collections from './Components/Collections/Collections';
+
 export default (
     <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/paintings2006" component={Paintings2006} />
-        <Route path="/paintings2008" component={Paintings2008} />
+        {/* <Route path="/paintings2006" component={Paintings2006} />
+        <Route path="/paintings2008" component={Paintings2008} /> */}
         <Route path="/paintings2010" component={Paintings2010} />
         <Route path="/paintings2012" component={Paintings2012} />
         <Route path="/paintings2014" component={Paintings2014} />
@@ -48,5 +50,7 @@ export default (
 
         <Route path="/about" component={About} />
         <Route path="/exhibition" component={Exhibition} />
+
+        <Route path="/collections/:category" component={Collections}></Route>
     </Switch>
 )

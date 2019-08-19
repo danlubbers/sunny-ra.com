@@ -13,7 +13,8 @@ export default class Header extends Component {
         showGallery: false,
         showHome: false,
         showAbout: false,
-        showExhibitions: false
+        showExhibitions: false,
+        // selectedGallery: 'home',
     }
 
     handleClickMobile = () => {
@@ -23,6 +24,10 @@ export default class Header extends Component {
     handleClickMobilePainting = () => {
         this.setState({showMobilePainting: !this.state.showMobilePainting})
     }
+
+    // handleSelectedGallery = () => {
+
+    // }
 
     handleOverPainting = () => {
         this.setState({
@@ -174,8 +179,8 @@ export default class Header extends Component {
                     <ul>     
                         <button aria-label="Paintings" className='paintingBtn' onMouseOver={this.handleOverPainting} >Paintings</button>
                             <div className={paintingDropDown} onMouseLeave={this.handleLeave}>
-                                <Link to='/paintings2006'><li>2006</li></Link>
-                                <Link to='/paintings2008'><li>2008</li></Link>
+                                <Link to='/collections/paintings2006'><li>2006</li></Link>
+                                <Link to='/collections/paintings2008'><li>2008</li></Link>
                                 <Link to='/paintings2010'><li>2010</li></Link>
                                 <Link to='/paintings2012'><li>2012</li></Link>
                                 <Link to='/paintings2014'><li>2014</li></Link>

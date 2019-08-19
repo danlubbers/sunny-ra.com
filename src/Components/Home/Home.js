@@ -5,7 +5,7 @@ import { getAllHomeImages } from '../../ducks/reducer';
 class Home extends Component {
 
     componentDidMount() {
-        this.props.getAllHomeImages().then((data => {console.log('resolved: ', data)}))
+        this.props.getAllHomeImages().then((data => {console.log('resolved: ', data)}))   
     }
 
     render() {

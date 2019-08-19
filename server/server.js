@@ -10,6 +10,9 @@ const express = require('express')
     , app = new express()
     , router = express.Router()
 
+
+// •••••••••••••••• PROCESS.ENV •••••••••••••••• //
+
 const {CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env;
 
 app.use(bodyParser.json())
@@ -22,6 +25,7 @@ app.use(session({
     saveUninitialized: true
 }))
 
+
 app.use(passport.initialize());
 // Interact with sessions
 app.use(passport.session());
@@ -30,12 +34,18 @@ app.use(passport.session());
 app.use(express.static(__dirname + '/../build'))
 app.use(router)
 
+
+// •••••••••••••••• ENDPOINTS •••••••••••••••• //
+
 app.get(`/api/getAllHomeImages`, controller.homeImages)
-app.get(`/api/getAllPaintings2006`, controller.paintings2006)
-app.get(`/api/getAllPaintings2008`, controller.paintings2008)
+// app.get(`/api/getAllPaintings2006`, controller.paintings2006)
+// app.get(`/api/getAllPaintings2008`, controller.paintings2008)
+// Trying to condense all gallery components to one
+app.get(`/api/getImages/:category`, controller.allImages)
 
 
-// Port
+// •••••••••••••••• CONNECTION_STRING && SERVER_PORT•••••••••••••••• //
+
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db);
     app.listen(SERVER_PORT, _ => {
