@@ -19,8 +19,20 @@ class Collections extends Component {
 }
 
     render() {
-        // var gallery = this.props.match.params.category.toUpperCase();
-        // console.log('render: ', gallery)
+        // Use for title heading of each gallery page
+        const gallery = this.props.match.params.category.toUpperCase();
+        let galleryTitle = '';
+        // If the string contains numbers then split them up
+        if(/\d/g.test(gallery)) {
+            var regexNum = gallery.match(/\d/gi).map(e => +e).join('');
+            // console.log(regexNum)
+            var regexTitle = gallery.match(/[a-z]/gi).map(e => e).join('');
+            galleryTitle = `${regexNum} ${regexTitle}`;
+            // console.log(regexTitle);
+        } else {
+            // If not, just show the gallery title
+            galleryTitle = gallery;
+        }
 
         if(this.props.getAllImages) {
             var imageData = this.props.allImages.map((e, i) => {
@@ -37,6 +49,10 @@ class Collections extends Component {
 
         return (
             <article className='home-container-desktop'>
+                <h1 className='gallery-title'>
+                    {galleryTitle}
+
+                </h1>
                 {imageData}
             </article>
         )
