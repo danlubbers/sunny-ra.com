@@ -2,11 +2,11 @@ import React from 'react';
 import {Redirect, Switch, Route} from 'react-router-dom';
 
 import Home from './Components/Home/Home'
+import Collections from './Components/Collections/Collections';
 import About from './Components/About/About';
 import Exhibition from './Components/Exhibition/Exhibition';
-
-import Collections from './Components/Collections/Collections';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
+
 
 export default (
     <Switch>

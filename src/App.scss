@@ -10,7 +10,7 @@ $font: 'Montserrat', sans-serif;
 $screen-xs: 376px;
 $screen-sm: 576px;
 $screen-md: 769px;
-$screen-lg: 965px;
+$screen-lg: 1025px;
 $screen-xl: 1235px;
 
 
@@ -19,7 +19,6 @@ $screen-xl: 1235px;
 @import './Components/Home/Home';
 @import './Components/About/About';
 @import './Components/Exhibition/Exhibition';
-
 @import './Components/PageNotFound/PageNotFound';
 
 // html {
@@ -27,7 +26,7 @@ $screen-xl: 1235px;
 // }
 
 // .entire-app-wrapper {
-//     background-color: red;
+    // background-color: red;
 // }
 
 

@@ -14,7 +14,7 @@ class Collections extends Component {
         if(this.props.match.params.category !== nextProps.match.params.category){
       
             this.props.getAllImages(nextProps.match.params.category)
-            // console.log('nextProps: ', nextProps)
+            console.log('nextProps: ', nextProps)
     }
 }
 
