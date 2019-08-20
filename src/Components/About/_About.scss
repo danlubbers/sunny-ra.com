@@ -24,22 +24,55 @@
         }
     }
 
-    .email-container{
+    .social-media-container {
+        width: 100%;
+        padding: 15px 80px 0px 80px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        color: $font-color-grey;
-        font-size: 1em;
-        font-family: $font;
+        justify-content: space-around;
 
-        .email {
-            padding-left: 5px;
+        .email-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
             color: $font-color-grey;
             font-size: 1em;
             font-family: $font;
+
+            .email {
+                padding-left: 5px;
+                color: $font-color-grey;
+                font-size: 2em;
+                font-family: $font;
+
+            }
+            .email:hover {
+                color: $font-color;
+                transition: .35s;
+            }
+
+            
+        }
+
+        .linkedin-container {
+            @extend .email-container;
+
+            .linkedIn {
+                @extend .email;
+            }
+        }
+        
+        .instagram-container {
+            @extend .email-container;
+
+            .instagram {
+                @extend .email;
+            }
         }
     }
+
+    
+
 
     .education-container {
         margin-top: 15px;

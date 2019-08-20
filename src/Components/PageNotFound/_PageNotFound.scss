@@ -1,0 +1,12 @@
+.page-not-found-container {
+    width: 100vw;
+    height: 80vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .page-not-found-text {
+        font-family: $font;
+        font-size: 3em;
+    }
+}

@@ -1,14 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 export default function About() {
 
-    let email = 'sunnyra23@gmail.com';
+    let email = `sunnyra23@gmail.com`;
+    let linkedIn = `https://www.linkedin.com/in/sunny-ra-28148a23/`;
+    let instagram = `https://www.instagram.com/sra23/`;
 
     return(
         <article className='about-container'>
             <div className='photo-contact-container'>
                 <img className='sunny-portrait' src="https://s3.amazonaws.com/content.danlubbers.com/sunny-content/sunny-red-dress.jpg" alt='Sunny Ra'/>
-                <span className='email-container'> <h3>Email:</h3> <a className='email' href={`mailto:${email}`}>sunnyra23@gmail.com</a></span>
+                <section className='social-media-container'>
+                    <span className='email-container'> <a className='email' href={`mailto:${email}`}><FaEnvelope /></a></span>
+                    <span className='linkedin-container'> <a className='linkedIn' href={`mailto:${linkedIn}`}><FaLinkedin /></a></span>
+                    <span className='instagram-container'> <a className='instagram' href={`mailto:${instagram}`}><FaInstagram /></a></span>
+                </section>
             </div>
             <section className='education-container'>
                 <h3 className='artist-educator'>ARTIST / EDUCATOR</h3>
