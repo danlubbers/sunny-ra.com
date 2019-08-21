@@ -6,6 +6,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
 
     @media (min-width: 1025px) {
         height: 100vh;

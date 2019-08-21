@@ -6,6 +6,7 @@
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
     
     @media (min-width: $screen-md) {
         height: 100vh;
