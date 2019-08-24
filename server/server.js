@@ -9,6 +9,7 @@ const express = require('express')
     , passport = require('passport')
     , app = new express()
     , router = express.Router()
+    , path = require('path')
 
 
 // •••••••••••••••• PROCESS.ENV •••••••••••••••• //
@@ -40,6 +41,9 @@ app.use(router)
 app.get(`/api/getAllHomeImages`, controller.homeImages)
 app.get(`/api/getImages/:category`, controller.allImages)
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './../build', 'index.html'))
+})
 
 // •••••••••••••••• CONNECTION_STRING && SERVER_PORT•••••••••••••••• //
 
