@@ -36,13 +36,13 @@
             justify-content: center;
             align-items: center;
             margin-top: 10px;
-            color: $font-color-grey;
+            color: $font-color-darker-grey;
             font-size: 1em;
             font-family: $font;
 
             .email {
                 padding-left: 5px;
-                color: $font-color-grey;
+                color: $font-color-darker-grey;
                 font-size: 2em;
                 font-family: $font;
 
@@ -92,7 +92,7 @@
         }
 
         h3 {
-            color: rgb(100, 100, 100);
+            color: $font-color-darker-grey;
                 text-transform: uppercase;
         }
     }

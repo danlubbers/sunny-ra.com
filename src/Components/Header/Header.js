@@ -194,8 +194,8 @@ export default class Header extends Component {
                                 <Link to='/collections/studentwork'><li>Student Work</li></Link>
                                 </div>
                         <Link to='/collections/commissioned'><button className='commissionBtn' onClick={this.handleLeave}>Commissioned Work</button></Link>
-                        <Link to='/about' className='aboutBtn' onClick={this.handleClickAbout} >About</Link>
-                        <Link to='/exhibition' className='exhibitionsBtn' onClick={this.handleClickExhibitions} >Exhibitions</Link>
+                        <Link to='/about'> <button className='aboutBtn' onClick={this.handleClickAbout} >About</button></Link>
+                        <Link to='/exhibition'><button className='exhibitionsBtn' onClick={this.handleClickExhibitions} >Exhibitions</button></Link>
                     </ul>
                 </nav>
             </header>
