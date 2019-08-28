@@ -41,6 +41,7 @@ app.use(router)
 app.get(`/api/getAllHomeImages`, controller.homeImages)
 app.get(`/api/getImages/:category`, controller.allImages)
 
+// This app.get is for page reloads otherwise without it there is a 'can not get error' when trying to reload the page
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './../build', 'index.html'))
 })

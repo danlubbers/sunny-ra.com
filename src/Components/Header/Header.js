@@ -115,12 +115,12 @@ export default class Header extends Component {
                                         </ul>
                                             {on && 
                                             <ul className='mobile-dropdown'>
-                                                <Link to='/collections/paintings2006'><li onClick={this.handleClickMobile}>2006</li></Link>
-                                                <Link to='/collections/paintings2008'><li onClick={this.handleClickMobile}>2008</li></Link>
-                                                <Link to='/collections/paintings2010'><li onClick={this.handleClickMobile}>2010</li></Link>
-                                                <Link to='/collections/paintings2012'><li onClick={this.handleClickMobile}>2012</li></Link>
-                                                <Link to='/collections/paintings2014'><li onClick={this.handleClickMobile}>2014</li></Link>
-                                                <Link to='/collections/paintings2015'><li onClick={this.handleClickMobile}>2015</li></Link>
+                                                <li><Link to='/collections/paintings2006' className='link' onClick={this.handleClickMobile}>2006</Link></li>
+                                                <li><Link to='/collections/paintings2008' className='link' onClick={this.handleClickMobile}>2008</Link></li>
+                                                <li><Link to='/collections/paintings2010' className='link' onClick={this.handleClickMobile}>2010</Link></li>
+                                                <li><Link to='/collections/paintings2012' className='link' onClick={this.handleClickMobile}>2012</Link></li>
+                                                <li><Link to='/collections/paintings2014' className='link' onClick={this.handleClickMobile}>2014</Link></li>
+                                                <li><Link to='/collections/paintings2015' className='link' onClick={this.handleClickMobile}>2015</Link></li>
                                             </ul>
                                             }
                                     </div>
@@ -135,10 +135,10 @@ export default class Header extends Component {
                                         </ul>
                                         {on && 
                                             <ul className='mobile-dropdown'>
-                                                <Link to='/collections/works2006'><li onClick={this.handleClickMobile}>2006</li></Link>
-                                                <Link to='/collections/works2009'><li onClick={this.handleClickMobile}>2009</li></Link>
-                                                <Link to='/collections/works2012'><li onClick={this.handleClickMobile}>2012</li></Link>
-                                                <Link to='/collections/works2016'><li onClick={this.handleClickMobile}>2016</li></Link>
+                                               <li><Link to='/collections/works2006' className='link' onClick={this.handleClickMobile}>2006</Link></li>
+                                               <li><Link to='/collections/works2009' className='link' onClick={this.handleClickMobile}>2009</Link></li>
+                                               <li><Link to='/collections/works2012' className='link' onClick={this.handleClickMobile}>2012</Link></li>
+                                               <li><Link to='/collections/works2016' className='link' onClick={this.handleClickMobile}>2016</Link></li>
                                             </ul>
                                         }
                                     </div>
@@ -153,8 +153,8 @@ export default class Header extends Component {
                                         </ul>
                                         {on && 
                                             <ul className='mobile-dropdown'>
-                                                <Link to='/collections/installation'><li onClick={this.handleClickMobile}>Installations</li></Link>
-                                                <Link to='/collections/studentwork'><li onClick={this.handleClickMobile}>Student Work</li></Link>
+                                                <li><Link to='/collections/installation' className='link' onClick={this.handleClickMobile}>Installations</Link></li>
+                                                <li><Link to='/collections/studentwork' className='link' onClick={this.handleClickMobile}>Student Work</Link></li>
                                             </ul>
                                         }
                                     </div>
@@ -171,32 +171,32 @@ export default class Header extends Component {
                     </div>
                 </div>
                 <nav>
-                    <ul>     
+                    <div className='nav-container'>     
                         <button aria-label="Paintings" className='paintingBtn' onMouseOver={this.handleOverPainting} >Paintings</button>
-                            <div className={paintingDropDown} onMouseLeave={this.handleLeave}>
-                                <Link to='/collections/paintings2006'><li>2006</li></Link>
-                                <Link to='/collections/paintings2008'><li>2008</li></Link>
-                                <Link to='/collections/paintings2010'><li>2010</li></Link>
-                                <Link to='/collections/paintings2012'><li>2012</li></Link>
-                                <Link to='/collections/paintings2014'><li>2014</li></Link>
-                                <Link to='/collections/paintings2015'><li>2015</li></Link>
-                            </div>
+                            <ul className={paintingDropDown} onMouseLeave={this.handleLeave}>
+                               <li><Link to='/collections/paintings2006' className='desktop-link'>2006</Link></li>
+                               <li><Link to='/collections/paintings2008' className='desktop-link'>2008</Link></li>
+                               <li><Link to='/collections/paintings2010' className='desktop-link'>2010</Link></li>
+                               <li><Link to='/collections/paintings2012' className='desktop-link'>2012</Link></li>
+                               <li><Link to='/collections/paintings2014' className='desktop-link'>2014</Link></li>
+                               <li><Link to='/collections/paintings2015' className='desktop-link'>2015</Link></li>
+                            </ul>
                        <button aria-label="Works On Paper" className='worksBtn' onMouseOver={this.handleOverWorks}>Works On Paper</button>
-                            <div className={worksDropDown} onMouseLeave={this.handleLeave}>
-                                <Link to='/collections/works2006'><li>2006</li></Link>
-                                <Link to='/collections/works2009'><li>2009</li></Link>
-                                <Link to='/collections/works2012'><li>2012</li></Link>
-                                <Link to='/collections/works2016'><li>2016</li></Link>
-                            </div>
+                            <ul className={worksDropDown} onMouseLeave={this.handleLeave}>
+                                <li><Link to='/collections/works2006' className='desktop-link'>2006</Link></li>
+                                <li><Link to='/collections/works2009' className='desktop-link'>2009</Link></li>
+                                <li><Link to='/collections/works2012' className='desktop-link'>2012</Link></li>
+                                <li><Link to='/collections/works2016' className='desktop-link'>2016</Link></li>
+                            </ul>
                         <button aria-label="Photo Gallery" className='galleryBtn' onMouseOver={this.handleOverGallery}>Photo Gallery</button>
-                            <div className={galleryDropDown} onMouseLeave={this.handleLeave}>
-                                <Link to='/collections/installation'><li>Installation Photos</li></Link>
-                                <Link to='/collections/studentwork'><li>Student Work</li></Link>
-                                </div>
+                            <ul className={galleryDropDown} onMouseLeave={this.handleLeave}>
+                                <li><Link to='/collections/installation' className='desktop-link'>Installation Photos</Link></li>
+                                <li><Link to='/collections/studentwork' className='desktop-link'>Student Work</Link></li>
+                                </ul>
                         <Link to='/collections/commissioned'><button className='commissionBtn' onClick={this.handleLeave}>Commissioned Work</button></Link>
                         <Link to='/about'> <button className='aboutBtn' onClick={this.handleClickAbout} >About</button></Link>
                         <Link to='/exhibition'><button className='exhibitionsBtn' onClick={this.handleClickExhibitions} >Exhibitions</button></Link>
-                    </ul>
+                    </div>
                 </nav>
             </header>
         </div>
