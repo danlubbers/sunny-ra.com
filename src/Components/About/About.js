@@ -12,9 +12,9 @@ export default function About() {
             <div className='photo-contact-container'>
                 <img className='sunny-portrait' src="https://s3.amazonaws.com/content.danlubbers.com/sunny-content/sunny-red-dress.jpg" alt='Sunny Ra'/>
                 <section className='social-media-container'>
-                    <span className='email-container'> <a className='email' href={`mailto:${email}`}><FaEnvelope /></a></span>
-                    <span className='linkedin-container'> <a className='linkedIn' href={`${linkedIn}`} target='_blank' rel='noopener noreferrer'><FaLinkedin /></a></span>
-                    <span className='instagram-container'> <a className='instagram' href={`${instagram}`} target='_blank' rel='noopener noreferrer'><FaInstagram /></a></span>
+                    <span className='email-container'> <a className='email' href={`mailto:${email}`} aria-label='Email Link' ><FaEnvelope /></a></span>
+                    <span className='linkedin-container'> <a className='linkedIn' href={`${linkedIn}`} aria-label='LinkedIn Link' target='_blank' rel='noopener noreferrer'><FaLinkedin /></a></span>
+                    <span className='instagram-container'> <a className='instagram' href={`${instagram}`} aria-label='Instagram Link' target='_blank' rel='noopener noreferrer'><FaInstagram /></a></span>
                 </section>
             </div>
             <section className='education-container'>
